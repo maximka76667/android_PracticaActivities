@@ -1,46 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText">
 
-    <TextView
+    <EditText
+        android:id="@+id/et_login_nick"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
-        android:text="Evay"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_below="@+id/Titulo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp"
+        android:ems="10"
+        android:hint="Nick">
+
+        <requestFocus />
+    </EditText>
 
     <EditText
-        android:id="@+id/nick"
-        android:layout_width="250dp"
+        android:id="@+id/et_login_clave"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Nick" />
-
-    <EditText
-        android:id="@+id/contrasena"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
-        android:hint="Contraseña" />
+        android:layout_below="@+id/et_login_nick"
+        android:layout_alignLeft="@+id/et_login_nick"
+        android:layout_marginTop="39dp"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/entrar"
-        android:layout_width="wrap_content"
+        android:id="@+id/bt_login_Entrar"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
+        android:layout_below="@+id/et_login_clave"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp"
         android:text="Entrar" />
 
-    <Button
-        android:id="@+id/registrarse"
+    <TextView
+        android:id="@+id/tv_login_registrarse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Registrarse" />
-</LinearLayout>
+        android:layout_below="@+id/bt_login_Entrar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp"
+        android:text="Registrarse"
+        android:textColor="#52B631"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/Titulo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:text="Evay"
+        android:textColor="#BD0000"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:typeface="serif" />
+</RelativeLayout>
